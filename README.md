@@ -11,3 +11,6 @@ output : Samuel
 Ajouts de commentaires de javadoc 
 javac Bonjour.java
 javadoc Bonjour.java
+
+Jar : 
+jar cmf manifestBonjour.txt Bonjour
