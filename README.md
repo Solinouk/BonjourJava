@@ -13,4 +13,4 @@ javac Bonjour.java
 javadoc Bonjour.java
 
 Jar : 
-jar cmf manifestBonjour.txt Bonjour
+jar cmf manifestBonjour.txt BonjourJava *.class
