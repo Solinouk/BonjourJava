@@ -16,10 +16,17 @@ public class CompteCourantTest {
     }
 
     @Test
-    public void TesterModifierSolde() {
+    public void TesterAjouterArgent() {
         CompteCourant compte1 = new CompteCourant("0000", "Dupont", 100.00, 200.00);
-        double nouveausolde = compte1.ModifierSoldeCompte(100.00);
-        assertEquals(200, nouveausolde);
+        double nouveauSolde = compte1.ModifierSoldeCompte(100.00);
+        assertEquals(200, nouveauSolde);
+    }
+
+    @Test
+    public void TesterRetirerArgent() {
+        CompteCourant compte1 = new CompteCourant("0000", "Dupont", 100.00, 200.00);
+        double nouveauSolde = compte1.ModifierSoldeCompte(-100.00);
+        assertEquals(0, nouveauSolde);
     }
 
 }
