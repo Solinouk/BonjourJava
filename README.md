@@ -1,4 +1,9 @@
 # BonjourJava
 
 Javac Bonjour.java
-Exécution: java Bonjou
+Exécution: java Bonjour
+
+Modification du code pour passer un argument
+javac .\Bonjour.java pour recompiler
+java Bonjour Samuel // passage de l'argument
+output : Samuel
