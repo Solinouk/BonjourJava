@@ -1,3 +1,4 @@
 # BonjourJava
 
-Javac BonjourJava.java
+Javac Bonjour.java
+Exécution: java Bonjou
