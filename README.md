@@ -1,1 +1,3 @@
 # BonjourJava
+
+Javac BonjourJava.java
