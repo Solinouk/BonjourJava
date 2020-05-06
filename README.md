@@ -8,5 +8,6 @@ javac .\Bonjour.java pour recompiler
 java Bonjour Samuel // passage de l'argument
 output : Samuel
 
-Création de javadoc
+Ajouts de commentaires de javadoc 
+javac Bonjour.java
 javadoc Bonjour.java
