@@ -23,4 +23,15 @@ public class CompteCourant {
         double nouveauSolde = this.solde + montant;
         return nouveauSolde;
     }
+
+    public boolean VerifierDepassementDecouvert(double montant)
+    {
+        boolean depasse = false;
+        double nouveauSolde = ModifierSoldeCompte(montant);
+        if(nouveauSolde < this.montantDecouvertAutorise)
+        {
+            depasse = true;
+        }
+        return depasse;
+    }
 }
