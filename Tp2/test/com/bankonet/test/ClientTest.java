@@ -10,7 +10,6 @@ public class ClientTest {
     @Test
     public void TesterCreaClientSansCompte()
     {
-
         Client client1 = new Client("Dup1","Dupont", "Maurice", null, null);
         assertEquals("Dupont", client1.getNom());
         assertEquals("Dup1", client1.getIdentifiant());
@@ -38,5 +37,26 @@ public class ClientTest {
         assertEquals("Dup1", client1.getIdentifiant());
         assertEquals("12345", client1.getCompteCourant().getNumeroCompte());
         assertEquals(null, client1.getCompteEpargne());
+    }
+
+    @Test
+    public void TesterCreaClientDeuxComptes()
+    {
+        CompteEpargne  epargne1 = new CompteEpargne("12345", "dudu", 100,2);
+        CompteCourant courant1 = new CompteCourant("12345", "Dudu", 200, 200);
+        Client client1 = new Client("Dup1","Dupont", "Maurice", epargne1, courant1);
+        assertEquals("Dupont", client1.getNom());
+        assertEquals("Dup1", client1.getIdentifiant());
+        assertEquals("12345", client1.getCompteCourant().getNumeroCompte());
+        assertEquals("dudu", client1.getCompteEpargne().getIntitule());
+    }
+
+    @Test
+    public void TesterCalculAvoirGlobal()
+    {
+        CompteEpargne  epargne1 = new CompteEpargne("12345", "dudu", 100,2);
+        CompteCourant courant1 = new CompteCourant("12345", "Dudu", 200, 200);
+        Client client1 = new Client("Dup1","Dupont", "Maurice", epargne1, courant1);
+        assertEquals(300, client1.CalculAvoirGlobal());
     }
 }

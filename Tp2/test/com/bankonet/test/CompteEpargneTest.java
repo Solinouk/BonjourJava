@@ -44,7 +44,6 @@ public class CompteEpargneTest {
         CompteEpargne epargne1 = new CompteEpargne("0000", "Dupont", 0, 2);
         String res = epargne1.toString();
         assertEquals("CompteEpargne{numeroCompte='0000', intitule='Dupont'}", res);
-
     }
 
     @Test

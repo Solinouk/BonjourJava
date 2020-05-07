@@ -72,5 +72,9 @@ public class Client {
                 '}';
     }
 
+    public double CalculAvoirGlobal()
+    {
+        return this.compteCourant.getSolde() + this.compteEpargne.getSolde();
+    }
 
 }
