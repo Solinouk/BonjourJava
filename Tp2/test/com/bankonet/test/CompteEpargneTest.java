@@ -47,4 +47,12 @@ public class CompteEpargneTest {
 
     }
 
+    @Test
+    public void TesterVerifSolde() throws Exception {
+        CompteEpargne epargne1 = new CompteEpargne("0000", "Dupont", 0, 2);
+        assertEquals(false,epargne1.RetraitValide(100) );
+    }
+
+
+
 }

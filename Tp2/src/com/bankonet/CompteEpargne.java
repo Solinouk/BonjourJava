@@ -21,12 +21,12 @@ public class CompteEpargne {
         this.intitule = intitule;
     }
 
-    public double getTauxDInteret() {
-        return tauxDInteret;
+    public double getTauxInteret() {
+        return tauxInteret;
     }
 
-    public void setTauxDInteret(double tauxDInteret) {
-        this.tauxDInteret = tauxDInteret;
+    public void setTauxInteret(double tauxInteret) {
+        this.tauxInteret = tauxInteret;
     }
     public static int getNbComptesEpargne() {
         return nbComptesEpargne;
@@ -35,14 +35,14 @@ public class CompteEpargne {
     private String numeroCompte;
     private String intitule ;
     private double solde ;
-    private double tauxDInteret ;
+    private double tauxInteret;
     private static int nbComptesEpargne =0;
 
     public CompteEpargne(String numeroCompte, String intitule, double solde, double tauxDInteret) {
         this.numeroCompte = numeroCompte;
         this.intitule = intitule;
         this.solde = solde;
-        this.tauxDInteret = tauxDInteret;
+        this.tauxInteret = tauxDInteret;
     }
 
     public CompteEpargne() {
@@ -69,6 +69,18 @@ public class CompteEpargne {
         }
     }
 
+    public boolean RetraitValide(double montant) throws Exception {
+
+        if(RetirerArgent(montant)<0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
     @Override
     public String toString() {
         return "CompteEpargne{" +
@@ -79,6 +91,8 @@ public class CompteEpargne {
 
     public double CalculerInteret()
     {
-        return this.solde * this.tauxDInteret/100;
+        return this.solde * this.tauxInteret /100;
     }
+
+
 }
