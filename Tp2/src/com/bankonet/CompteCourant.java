@@ -2,6 +2,10 @@ package com.bankonet;
 
 public class CompteCourant {
     private String numeroCompte;
+    private String intitule ;
+    private double solde ;
+    private double montantDecouvertAutorise ;
+    private static int nbComptesCourants =0;
 
     public double getSolde() {
         return solde;
@@ -35,10 +39,7 @@ public class CompteCourant {
         this.montantDecouvertAutorise = montantDecouvertAutorise;
     }
 
-    private String intitule ;
-    private double solde ;
-    private double montantDecouvertAutorise ;
-    private static int nbComptesCourants =0;
+
 
     public CompteCourant() {
         nbComptesCourants +=1;
