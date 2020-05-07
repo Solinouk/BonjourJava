@@ -20,7 +20,7 @@ public class Main {
         listeClients.add(bon);
 
         for (Client c : listeClients) {
-            double interet = c.compteEpargne.calculerInteret();
+            c.compteEpargne.calculerInteret();
             double avoir = c.CalculAvoirGlobal();
             System.out.println("le client " + c.getNom() + " possède " + avoir + " euros");
         }
