@@ -1,7 +1,6 @@
 package com.bankonet;
 
 public class Client {
-
     private final String  identifiant;
     private final String nom ;
     private final String prenom;
@@ -38,7 +37,7 @@ public class Client {
                 '}';
     }
 
-    public double CalculAvoirGlobal()
+    public double calculAvoirGlobal()
     {
         return this.compteCourant.solde + this.compteEpargne.solde;
     }

@@ -1,8 +1,7 @@
 package com.bankonet;
 
 public abstract class Compte {
-
-     protected String numeroCompte;
+    protected String numeroCompte;
     protected String intitule ;
     protected double solde ;
 
@@ -12,14 +11,9 @@ public abstract class Compte {
         this.solde = solde;
     }
 
-    public Compte() {
+    public Compte() {    }
 
-    }
-
-    public double ajouterArgent(double montant)
-    {
-        return this.solde + montant;
-    }
+    public double ajouterArgent(double montant)  {return this.solde + montant;}
 
     public double retirerArgent(double montant)
     {
@@ -42,7 +36,4 @@ public abstract class Compte {
                 ", intitule='" + intitule + '\'' +
                 '}';
     }
-
-
-
 }

@@ -7,6 +7,9 @@ public class CompteCourant extends Compte {
     public static int getNbComptesCourants() {
         return nbComptesCourants;
     }
+    public String getNumeroCompte() {
+        return numeroCompte;
+    }
 
     public CompteCourant() {
         super();
@@ -24,9 +27,5 @@ public class CompteCourant extends Compte {
     @Override // vérifie que le retrait ne dépasse pas le montant de découvert autorisé
     public boolean isDebitAutorise(double montant) {
         return retirerArgent(montant) >= this.montantDecouvertAutorise;
-    }
-
-    public String getNumeroCompte() {
-        return numeroCompte;
     }
 }

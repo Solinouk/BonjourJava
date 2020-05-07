@@ -19,7 +19,6 @@ public class CompteCourantTest {
     {
         CompteCourant compte1 = new CompteCourant("0000", "Dupont", solde, 0);
         return compte1.ajouterArgent(montant);
-
     }
 
     public double debiter(double montant, double solde)
@@ -52,6 +51,7 @@ public class CompteCourantTest {
     public void debiterSoldeNegatif() {
         assertEquals(-200, debiter(-100, -100), 0.50);
     }
+
     @Test
     public void debiterSoldeNul() {
         assertEquals(-100, debiter(-100, 0), 0.50);

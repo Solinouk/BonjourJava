@@ -9,11 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 public class CompteEpargneTest {
 
     @Test
-    public void TesterNbComptesEpargne() {
+    public void testerNbComptesEpargne() {
         new CompteEpargne();
         new CompteEpargne();
         new CompteEpargne();
-
         int nbComptes = CompteEpargne.getNbComptesEpargne();
         assertEquals(3, nbComptes);
     }
@@ -31,14 +30,14 @@ public class CompteEpargneTest {
     }
 
     @Test
-    public void TesterInteret()
+    public void testerInteret()
     {
         CompteEpargne epargne1 = new CompteEpargne("0000", "Dupont", 100, 2);
         assertEquals(102, epargne1.calculerInteret(), 0.5);
     }
 
     @Test
-    public void TesterToString()
+    public void testerToString()
     {
         CompteEpargne epargne1 = new CompteEpargne("0000", "Dupont", 0, 2);
         assertEquals("numeroCompte='0000', intitule='Dupont'}", epargne1.toString());

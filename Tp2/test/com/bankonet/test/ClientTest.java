@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class ClientTest {
     @Test
-    public void TesterCreaClientSansCompte()
+    public void testerCreaClientSansCompte()
     {
         Client client1 = new Client("Dup1","Dupont", "Maurice", null, null);
         assertEquals("Dupont", client1.getNom());
@@ -20,7 +20,7 @@ public class ClientTest {
     }
 
      @Test
-    public void TesterCreaClientCompteEpargne()
+    public void testerCreaClientCompteEpargne()
     {
         CompteEpargne  epargne1 = new CompteEpargne("12345", "dudu", 100,2);
         Client client1 = new Client("Dup1","Dupont", "Maurice", epargne1, null);
@@ -31,7 +31,7 @@ public class ClientTest {
     }
 
      @Test
-    public void TesterCreaClientCourantEpargne()
+    public void testerCreaClientCourantEpargne()
     {
         CompteCourant courant1 = new CompteCourant("12345", "Dudu", 200, 200);
         Client client1 = new Client("Dup1","Dupont", "Maurice", null, courant1);
@@ -42,7 +42,7 @@ public class ClientTest {
     }
 
     @Test
-    public void TesterCreaClientDeuxComptes()
+    public void testerCreaClientDeuxComptes()
     {
         CompteEpargne  epargne1 = new CompteEpargne("12345", "dudu", 100,2);
         CompteCourant courant1 = new CompteCourant("12345", "Dudu", 200, 200);
@@ -54,13 +54,12 @@ public class ClientTest {
     }
 
     @Test
-    public void TesterCalculAvoirGlobal()
+    public void testerCalculAvoirGlobal()
     {
         CompteEpargne  epargne1 = new CompteEpargne("12345", "dudu", 100,2);
         CompteCourant courant1 = new CompteCourant("12345", "Dudu", 200, 200);
         Client client1 = new Client("Dup1","Dupont", "Maurice", epargne1, courant1);
-        assertEquals(300, client1.CalculAvoirGlobal());
+        assertEquals(300, client1.calculAvoirGlobal());
     }
-
 
 }

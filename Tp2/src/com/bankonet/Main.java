@@ -20,11 +20,11 @@ public class Main {
         listeClients.add(bon);
 
         for (Client c : listeClients) {
+            double avoirInit = c.calculAvoirGlobal();
             c.compteEpargne.calculerInteret();
-            double avoir = c.CalculAvoirGlobal();
-            System.out.println("le client " + c.getNom() + " possède " + avoir + " euros");
+            double avoirFin = c.calculAvoirGlobal();
+            System.out.println("A ce jour le client " + c.getNom() + " possède " + avoirInit + " euros");
+            System.out.println("Après versement des intérêts le client " + c.getNom() + " possède " + avoirFin + " euros");
         }
-
-
-    }
+   }
 }
