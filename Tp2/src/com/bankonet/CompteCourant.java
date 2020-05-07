@@ -34,4 +34,15 @@ public class CompteCourant {
         }
         return depasse;
     }
+
+
+    @Override
+    public String toString() {
+        return "CompteCourant{" +
+                "numeroCompte='" + numeroCompte + '\'' +
+                ", intitule='" + intitule + '\'' +
+                '}';
+    }
+
+
 }

@@ -57,6 +57,16 @@ public class CompteCourantTest {
         assertEquals(true, depasse);
     }
 
+
+    @Test
+    public void TesterToString()
+    {
+        CompteCourant compte1 = new CompteCourant("0000", "Dupont", 0, -100);
+        String res = compte1.toString();
+        assertEquals("CompteCourant{numeroCompte='0000', intitule='Dupont'}", res);
+
+    }
+
     /*@Test
     public void TesterAjouterArgent() {
         CompteCourant compte1 = new CompteCourant("0000", "Dupont", 100.00, 200.00);
