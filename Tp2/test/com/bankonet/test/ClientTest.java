@@ -59,4 +59,6 @@ public class ClientTest {
         Client client1 = new Client("Dup1","Dupont", "Maurice", epargne1, courant1);
         assertEquals(300, client1.CalculAvoirGlobal());
     }
+
+
 }

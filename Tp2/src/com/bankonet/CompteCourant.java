@@ -1,9 +1,9 @@
 package com.bankonet;
 
-public class CompteCourant {
-    private String numeroCompte;
-    private String intitule ;
-    private double solde ;
+public class CompteCourant extends Compte {
+    //private String numeroCompte;
+    //private String intitule ;
+    //private double solde ;
     private double montantDecouvertAutorise ;
     private static int nbComptesCourants =0;
 
@@ -59,25 +59,25 @@ public class CompteCourant {
     }
      */
 
-    public double AjouterArgent(double montant)
-    {
-        double nouveauSolde = this.solde + montant;
-        return nouveauSolde;
-    }
-
-    public double RetirerArgent(double montant)
-    {
-        if(montant >0)
-        {
-            double nouveauSolde = this.solde - montant;
-            return nouveauSolde;
-        }
-        else
-        {
-            double nouveauSolde = this.solde + montant;
-            return nouveauSolde;
-        }
-    }
+//    public double AjouterArgent(double montant)
+//    {
+//        double nouveauSolde = this.solde + montant;
+//        return nouveauSolde;
+//    }
+//
+//    public double RetirerArgent(double montant)
+//    {
+//        if(montant >0)
+//        {
+//            double nouveauSolde = this.solde - montant;
+//            return nouveauSolde;
+//        }
+//        else
+//        {
+//            double nouveauSolde = this.solde + montant;
+//            return nouveauSolde;
+//        }
+//    }
 
     public boolean VerifierDepassementDecouvert(double montant)
     {
@@ -91,13 +91,13 @@ public class CompteCourant {
     }
 
 
-    @Override
-    public String toString() {
-        return "CompteCourant{" +
-                "numeroCompte='" + numeroCompte + '\'' +
-                ", intitule='" + intitule + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "CompteCourant{" +
+//                "numeroCompte='" + numeroCompte + '\'' +
+//                ", intitule='" + intitule + '\'' +
+//                '}';
+//    }
 
 
 }

@@ -38,8 +38,7 @@ public class CompteCourantTest {
 
     @Test
     public void TesterAjouterArgentSoldePositif() {
-        double nouveauSolde = AjouterArgent(100,  100);
-        assertEquals(200, nouveauSolde);
+        assertEquals(200, AjouterArgent(100,  100));
     }
 
     @Test

@@ -1,6 +1,6 @@
 package com.bankonet;
 
-public class CompteEpargne {
+public class CompteEpargne extends Compte{
     public double getSolde() {
         return solde;
     }
@@ -32,9 +32,9 @@ public class CompteEpargne {
         return nbComptesEpargne;
     }
 
-    private String numeroCompte;
-    private String intitule ;
-    private double solde ;
+//    private String numeroCompte;
+//    private String intitule ;
+//    private double solde ;
     private double tauxInteret;
     private static int nbComptesEpargne =0;
 
@@ -49,45 +49,45 @@ public class CompteEpargne {
         nbComptesEpargne +=1;
     }
 
-    public double AjouterArgent(double montant)
-    {
-        double nouveauSolde = this.solde + montant;
-        return nouveauSolde;
-    }
+//    public double AjouterArgent(double montant)
+//    {
+//        double nouveauSolde = this.solde + montant;
+//        return nouveauSolde;
+//    }
+//
+//    public double RetirerArgent(double montant)
+//    {
+//        if(montant >0)
+//        {
+//            double nouveauSolde = this.solde - montant;
+//            return nouveauSolde;
+//        }
+//        else
+//        {
+//            double nouveauSolde = this.solde + montant;
+//            return nouveauSolde;
+//        }
+//    }
 
-    public double RetirerArgent(double montant)
-    {
-        if(montant >0)
-        {
-            double nouveauSolde = this.solde - montant;
-            return nouveauSolde;
-        }
-        else
-        {
-            double nouveauSolde = this.solde + montant;
-            return nouveauSolde;
-        }
-    }
+//    public boolean RetraitValide(double montant) {
+//
+//        if(RetirerArgent(montant)<0)
+//        {
+//            return false;
+//        }
+//        else
+//        {
+//            return true;
+//        }
+//    }
 
-    public boolean RetraitValide(double montant) throws Exception {
-
-        if(RetirerArgent(montant)<0)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
-
-    @Override
-    public String toString() {
-        return "CompteEpargne{" +
-                "numeroCompte='" + numeroCompte + '\'' +
-                ", intitule='" + intitule + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "CompteEpargne{" +
+//                "numeroCompte='" + numeroCompte + '\'' +
+//                ", intitule='" + intitule + '\'' +
+//                '}';
+//    }
 
     public double CalculerInteret()
     {
