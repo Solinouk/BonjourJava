@@ -34,31 +34,26 @@ public class CompteCourantTest {
 
     @Test
     public void crediterSoldeNegatif() {
-        double nouveausolde = crediter(100,  -100);
-        assertEquals(0, nouveausolde);
+        assertEquals(0, crediter(100,  -100), 0.50);
     }
 
     @Test
     public void crediterSoldeNul() {
-        double nouveauSolde = crediter(100,  0);
-        assertEquals(100, nouveauSolde);
+        assertEquals(100, crediter(100,  0), 0.50);
     }
 
     @Test
     public void debiterSoldePositif() {
-        double nouveauSolde = debiter(-100, 100);
-        assertEquals(0, nouveauSolde);
+        assertEquals(0, debiter(-100, 100), 0.50);
     }
 
     @Test
     public void debiterSoldeNegatif() {
-        double nouveauSolde = debiter(-100, -100);
-        assertEquals(-200, nouveauSolde);
+        assertEquals(-200, debiter(-100, -100), 0.50);
     }
     @Test
     public void debiterSoldeNul() {
-        double nouveauSolde = debiter(-100, 0);
-        assertEquals(-100, nouveauSolde);
+        assertEquals(-100, debiter(-100, 0), 0.50);
     }
 
     @Test
@@ -80,8 +75,6 @@ public class CompteCourantTest {
     {
         CompteCourant compte1 = new CompteCourant("0000", "Dupont", 0, -100);
         assertEquals("numeroCompte='0000', intitule='Dupont'}", compte1.toString());
-
     }
-
 
 }
