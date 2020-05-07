@@ -8,7 +8,17 @@ public class Client {
     CompteEpargne compteEpargne;
     CompteCourant compteCourant;
 
+    public String getIdentifiant() {
+        return identifiant;
+    }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
 
     private static int nbClients;
 
@@ -24,41 +34,10 @@ public class Client {
         return compteEpargne;
     }
 
-    public void setCompteEpargne(CompteEpargne compteEpargne) {
-        this.compteEpargne = compteEpargne;
-    }
-
     public CompteCourant getCompteCourant() {
         return compteCourant;
     }
 
-    public void setCompteCourant(CompteCourant compteCourant) {
-        this.compteCourant = compteCourant;
-    }
-
-    public String getIdentifiant() {
-        return identifiant;
-    }
-
-    public void setIdentifiant(String identifiant) {
-        this.identifiant = identifiant;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
     public static int getNbClients() {
         return nbClients;
     }
@@ -74,7 +53,7 @@ public class Client {
 
     public double CalculAvoirGlobal()
     {
-        return this.compteCourant.getSolde() + this.compteEpargne.getSolde();
+        return this.compteCourant.solde + this.compteEpargne.solde;
     }
 
 }
