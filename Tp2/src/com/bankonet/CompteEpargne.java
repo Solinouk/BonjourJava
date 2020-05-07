@@ -14,7 +14,8 @@ public class CompteEpargne extends Compte{
 
     public double calculerInteret()
     {
-        return this.solde * this.tauxInteret /100;
+        this.solde += this.solde * this.tauxInteret /100;
+        return this.solde;
     }
 
     @Override //vérifie que le retrait ne dépasse pas le solde disponible

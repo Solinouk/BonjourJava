@@ -34,7 +34,7 @@ public class CompteEpargneTest {
     public void TesterInteret()
     {
         CompteEpargne epargne1 = new CompteEpargne("0000", "Dupont", 100, 2);
-        assertEquals(2, epargne1.calculerInteret(), 0.5);
+        assertEquals(102, epargne1.calculerInteret(), 0.5);
     }
 
     @Test

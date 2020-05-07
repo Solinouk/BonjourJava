@@ -12,7 +12,7 @@ public class Main {
         CompteEpargne epargne1 = new CompteEpargne("AAAA", "epargne2", 15000.00, 2);
         CompteEpargne epargne2 = new CompteEpargne("BBBB", "epargne2", 1000.00, 1);
 
-        Client durand = new Client("Du1","Durand", "Jean-Pierre", epargne1, courant1);
+        Client durand = new Client("Du1", "Durand", "Jean-Pierre", epargne1, courant1);
         Client bon = new Client("Bo1", "Bon", "Jean", epargne2, courant2);
 
         List<Client> listeClients = new ArrayList<>();
@@ -20,9 +20,9 @@ public class Main {
         listeClients.add(bon);
 
         for (Client c : listeClients) {
-             double avoir = c.CalculAvoirGlobal();
-             System.out.println("le client " + c.getNom() + " possède " + avoir + " euros");
-
+            double interet = c.compteEpargne.calculerInteret();
+            double avoir = c.CalculAvoirGlobal();
+            System.out.println("le client " + c.getNom() + " possède " + avoir + " euros");
         }
 
 
