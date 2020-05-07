@@ -50,6 +50,4 @@ public class CompteEpargneTest {
         assertFalse(epargne1.isDebitAutorise(100));
     }
 
-
-
 }
