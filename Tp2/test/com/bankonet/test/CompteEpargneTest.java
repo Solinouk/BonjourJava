@@ -4,14 +4,15 @@ import com.bankonet.CompteEpargne;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class CompteEpargneTest {
 
     @Test
     public void TesterNbComptesEpargne() {
-        CompteEpargne epargne1 =  new CompteEpargne();
-        CompteEpargne epargne2 =  new CompteEpargne();
-        CompteEpargne epargne3 =  new CompteEpargne();
+        new CompteEpargne();
+        new CompteEpargne();
+        new CompteEpargne();
 
         int nbComptes = CompteEpargne.getNbComptesEpargne();
         assertEquals(3, nbComptes);
@@ -20,15 +21,13 @@ public class CompteEpargneTest {
     public double crediter(double montant, double solde)
     {
         CompteEpargne epargne1 = new CompteEpargne("0000", "Dupont", solde, 0);
-        double nouveauSolde = epargne1.ajouterArgent(montant);
-        return nouveauSolde;
+        return epargne1.ajouterArgent(montant);
     }
 
     public double debiter(double montant, double solde)
     {
         CompteEpargne epargne1 = new CompteEpargne("0000", "Dupont", solde, 0);
-        double nouveauSolde = epargne1.retirerArgent(montant);
-        return nouveauSolde;
+        return epargne1.retirerArgent(montant);
     }
 
     @Test
@@ -42,14 +41,13 @@ public class CompteEpargneTest {
     public void TesterToString()
     {
         CompteEpargne epargne1 = new CompteEpargne("0000", "Dupont", 0, 2);
-        String res = epargne1.toString();
-        assertEquals("numeroCompte='0000', intitule='Dupont'}", res);
+        assertEquals("numeroCompte='0000', intitule='Dupont'}", epargne1.toString());
     }
 
     @Test
     public void isDebitAutorise()  {
         CompteEpargne epargne1 = new CompteEpargne("0000", "Dupont", 0, 2);
-        assertEquals(false,epargne1.isDebitAutorise(100) );
+        assertFalse(epargne1.isDebitAutorise(100));
     }
 
 

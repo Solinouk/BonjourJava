@@ -2,25 +2,24 @@ package com.bankonet;
 
 public class Client {
 
-    private String identifiant;
-    private String nom ;
-    private String prenom;
+    private final String  identifiant;
+    private final String nom ;
+    private final String prenom;
     CompteEpargne compteEpargne;
     CompteCourant compteCourant;
 
     public String getIdentifiant() {
         return identifiant;
     }
-
     public String getNom() {
         return nom;
     }
-
-    public String getPrenom() {
-        return prenom;
+    public CompteEpargne getCompteEpargne() {
+        return compteEpargne;
     }
-
-    private static int nbClients;
+    public CompteCourant getCompteCourant() {
+        return compteCourant;
+    }
 
     public Client(String identifiant, String nom, String prenom, CompteEpargne compteEpargne, CompteCourant compteCourant) {
         this.identifiant = identifiant;
@@ -28,18 +27,6 @@ public class Client {
         this.prenom = prenom;
         this.compteEpargne = compteEpargne;
         this.compteCourant = compteCourant;
-    }
-
-    public CompteEpargne getCompteEpargne() {
-        return compteEpargne;
-    }
-
-    public CompteCourant getCompteCourant() {
-        return compteCourant;
-    }
-
-    public static int getNbClients() {
-        return nbClients;
     }
 
     @Override

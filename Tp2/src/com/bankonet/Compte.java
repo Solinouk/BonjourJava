@@ -18,8 +18,7 @@ public abstract class Compte {
 
     public double ajouterArgent(double montant)
     {
-        double nouveauSolde = this.solde + montant;
-        return nouveauSolde;
+        return this.solde + montant;
     }
 
     public double retirerArgent(double montant)

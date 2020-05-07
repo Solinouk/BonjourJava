@@ -2,14 +2,15 @@ package com.bankonet.test;
 
 import com.bankonet.CompteCourant;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CompteCourantTest {
     @Test
     public void testernbcomptescourants() {
-        CompteCourant compte1 = new CompteCourant();
-        CompteCourant compte2 = new CompteCourant();
-        CompteCourant compte3 = new CompteCourant();
+        new CompteCourant();
+        new CompteCourant();
+        new CompteCourant();
         int nbComptes = CompteCourant.getNbComptesCourants();
         assertEquals(3, nbComptes);
     }
@@ -60,14 +61,14 @@ public class CompteCourantTest {
     public void testerDepassementDecouvert()
     {
         CompteCourant compte1 = new CompteCourant("0000", "Dupont", 0, -200);
-        assertEquals(false, compte1.isDebitAutorise(-300));
+        assertFalse(compte1.isDebitAutorise(-300));
     }
 
     @Test
     public void testerNonDepassementDecouvert()
     {
         CompteCourant compte1 = new CompteCourant("0000", "Dupont", 0, -200);
-        assertEquals(true, compte1.isDebitAutorise(-200));
+        assertTrue(compte1.isDebitAutorise(-200));
     }
 
     @Test

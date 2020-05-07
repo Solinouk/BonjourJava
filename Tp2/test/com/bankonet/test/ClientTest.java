@@ -6,6 +6,7 @@ import com.bankonet.CompteCourant;
 import com.bankonet.CompteEpargne;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class ClientTest {
     @Test
@@ -14,8 +15,8 @@ public class ClientTest {
         Client client1 = new Client("Dup1","Dupont", "Maurice", null, null);
         assertEquals("Dupont", client1.getNom());
         assertEquals("Dup1", client1.getIdentifiant());
-        assertEquals(null, client1.getCompteCourant());
-        assertEquals(null, client1.getCompteEpargne());
+        assertNull(client1.getCompteCourant());
+        assertNull(client1.getCompteEpargne());
     }
 
      @Test
@@ -25,7 +26,7 @@ public class ClientTest {
         Client client1 = new Client("Dup1","Dupont", "Maurice", epargne1, null);
         assertEquals("Dupont", client1.getNom());
         assertEquals("Dup1", client1.getIdentifiant());
-        assertEquals(null, client1.getCompteCourant());
+        assertNull(client1.getCompteCourant());
         assertEquals("dudu", client1.getCompteEpargne().getIntitule());
     }
 
@@ -37,7 +38,7 @@ public class ClientTest {
         assertEquals("Dupont", client1.getNom());
         assertEquals("Dup1", client1.getIdentifiant());
         assertEquals("12345", client1.getCompteCourant().getNumeroCompte());
-        assertEquals(null, client1.getCompteEpargne());
+        assertNull(client1.getCompteEpargne());
     }
 
     @Test
