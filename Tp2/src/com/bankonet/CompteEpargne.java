@@ -19,14 +19,7 @@ public class CompteEpargne extends Compte{
 
     @Override //vérifie que le retrait ne dépasse pas le solde disponible
     public boolean isDebitAutorise(double montant) {
-        if(retirerArgent(montant)<0)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        return !(retirerArgent(montant) < 0);
     }
 
 //    public double getSolde() {return solde;}

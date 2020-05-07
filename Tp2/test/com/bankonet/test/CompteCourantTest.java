@@ -2,7 +2,6 @@ package com.bankonet.test;
 
 import com.bankonet.CompteCourant;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CompteCourantTest {
@@ -18,15 +17,14 @@ public class CompteCourantTest {
     public double crediter(double montant, double solde)
     {
         CompteCourant compte1 = new CompteCourant("0000", "Dupont", solde, 0);
-        double nouveauSolde = compte1.ajouterArgent(montant);
-        return nouveauSolde;
+        return compte1.ajouterArgent(montant);
+
     }
 
     public double debiter(double montant, double solde)
     {
         CompteCourant compte1 = new CompteCourant("0000", "Dupont", solde,0);
-        double nouveauSolde = compte1.retirerArgent(montant);
-        return nouveauSolde;
+        return compte1.retirerArgent(montant);
     }
 
     @Test
@@ -64,21 +62,24 @@ public class CompteCourantTest {
     }
 
     @Test
-    public void testerDecouvert()
+    public void testerDepassementDecouvert()
     {
         CompteCourant compte1 = new CompteCourant("0000", "Dupont", 0, -200);
-        double nouveauSolde = compte1.retirerArgent(-300);
-        boolean depasse = compte1.isDebitAutorise(-300);
-        assertEquals(true, depasse);
+        assertEquals(false, compte1.isDebitAutorise(-300));
     }
 
+    @Test
+    public void testerNonDepassementDecouvert()
+    {
+        CompteCourant compte1 = new CompteCourant("0000", "Dupont", 0, -200);
+        assertEquals(true, compte1.isDebitAutorise(-200));
+    }
 
     @Test
     public void testerToString()
     {
         CompteCourant compte1 = new CompteCourant("0000", "Dupont", 0, -100);
-        String res = compte1.toString();
-        assertEquals("numeroCompte='0000', intitule='Dupont'}", res);
+        assertEquals("numeroCompte='0000', intitule='Dupont'}", compte1.toString());
 
     }
 

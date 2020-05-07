@@ -26,13 +26,13 @@ public abstract class Compte {
     {
         if(montant >0)
         {
-            double nouveauSolde = this.solde - montant;
-            return nouveauSolde;
+            this.solde = this.solde - montant;
+            return this.solde;
         }
         else
         {
-            double nouveauSolde = this.solde + montant;
-            return nouveauSolde;
+            this.solde = this.solde + montant;
+            return this.solde;
         }
     }
 

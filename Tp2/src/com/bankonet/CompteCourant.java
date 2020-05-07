@@ -23,12 +23,7 @@ public class CompteCourant extends Compte {
 
     @Override // vérifie que le retrait ne dépasse pas le montant de découvert autorisé
     public boolean isDebitAutorise(double montant) {
-        boolean depasse = false;
-        double nouveauSolde = retirerArgent(montant);
-        if (nouveauSolde < this.montantDecouvertAutorise) {
-            depasse = true;
-        }
-        return depasse;
+        return retirerArgent(montant) >= this.montantDecouvertAutorise;
     }
 
     public String getNumeroCompte() {
